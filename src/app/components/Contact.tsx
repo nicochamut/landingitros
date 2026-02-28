@@ -67,7 +67,7 @@ export function Contact() {
   };
 
   return (
-    <section id="contacto" className="py-20 sm:py-24 px-4 sm:px-6 bg-[#131415]">
+    <section id="contacto" className="py-16 sm:py-20 px-4 sm:px-6 bg-[#131415]">
       <div className="mx-auto max-w-7xl">
         <div className="grid lg:grid-cols-2 gap-12">
           <div>
@@ -75,7 +75,7 @@ export function Contact() {
               <span className="text-sm text-[#2794F6]">Contacto</span>
             </div>
 
-            <h2 className="text-3xl sm:text-4xl font-medium text-white mb-6">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-medium text-white mb-6">
               Si tu operacion exige mas orden, control e inteligencia real, conversemos.
             </h2>
 
@@ -108,14 +108,9 @@ export function Contact() {
                 </div>
                 <div>
                   <div className="text-white/50 text-sm mb-1">Telefono</div>
-                  <div className="flex flex-col gap-1">
-                    <a href="tel:+543415625518" className="text-white hover:text-[#2794F6] transition-colors">
-                      3415 62-5518
-                    </a>
-                    <a href="tel:+542477397546" className="text-white hover:text-[#2794F6] transition-colors">
-                      2477397546
-                    </a>
-                  </div>
+                  <a href="tel:+5493417415834" className="text-white hover:text-[#2794F6] transition-colors">
+                    +54 9 3417 41-5834
+                  </a>
                 </div>
               </div>
 

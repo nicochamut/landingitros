@@ -10,6 +10,7 @@ dotenv.config({ path: path.resolve(__dirname, '../.env') });
 
 const app = express();
 const port = Number(process.env.CONTACT_API_PORT ?? 8787);
+const contactDebug = process.env.CONTACT_DEBUG === 'true';
 
 const requiredEnvVars = [
   'SMTP_HOST',
@@ -22,6 +23,12 @@ const requiredEnvVars = [
 
 const getMissingEnvVars = () => requiredEnvVars.filter((key) => !process.env[key]);
 const missingEnvVars = getMissingEnvVars();
+const isValidEmail = (value) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(value).trim());
+const parseRecipientList = (rawValue) =>
+  String(rawValue ?? '')
+    .split(/[;,]/)
+    .map((email) => email.trim())
+    .filter(Boolean);
 
 if (missingEnvVars.length > 0) {
   console.error(`Missing required env vars: ${missingEnvVars.join(', ')}`);
@@ -56,8 +63,7 @@ app.post('/api/contact', async (req, res) => {
     return;
   }
 
-  const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(email));
-  if (!isValidEmail) {
+  if (!isValidEmail(email)) {
     res.status(400).json({
       message: 'El email ingresado no es valido.',
     });
@@ -73,10 +79,19 @@ app.post('/api/contact', async (req, res) => {
     return;
   }
 
+  const recipients = parseRecipientList(process.env.CONTACT_TO_EMAIL);
+  if (recipients.length === 0 || recipients.some((recipient) => !isValidEmail(recipient))) {
+    console.error('Invalid CONTACT_TO_EMAIL value:', process.env.CONTACT_TO_EMAIL);
+    res.status(500).json({
+      message: 'La lista de destinatarios del servidor no es valida.',
+    });
+    return;
+  }
+
   try {
-    await transporter.sendMail({
+    const info = await transporter.sendMail({
       from: process.env.CONTACT_FROM_EMAIL,
-      to: process.env.CONTACT_TO_EMAIL,
+      to: recipients,
       replyTo: String(email).trim(),
       subject: `Nuevo contacto desde landing - ${String(name).trim()}`,
       text: [
@@ -98,7 +113,42 @@ app.post('/api/contact', async (req, res) => {
       `,
     });
 
-    res.status(200).json({ message: 'Mensaje enviado correctamente.' });
+    if (Array.isArray(info.rejected) && info.rejected.length > 0) {
+      console.error('Some recipients were rejected by SMTP:', info.rejected);
+    }
+
+    if (!Array.isArray(info.accepted) || info.accepted.length === 0) {
+      res.status(502).json({
+        message: 'El proveedor SMTP rechazo todos los destinatarios.',
+        ...(contactDebug
+          ? {
+              debug: {
+                envelope: info.envelope,
+                messageId: info.messageId,
+                accepted: info.accepted,
+                rejected: info.rejected,
+                response: info.response,
+              },
+            }
+          : {}),
+      });
+      return;
+    }
+
+    res.status(200).json({
+      message: 'Mensaje enviado correctamente.',
+      ...(contactDebug
+        ? {
+            debug: {
+              envelope: info.envelope,
+              messageId: info.messageId,
+              accepted: info.accepted,
+              rejected: info.rejected,
+              response: info.response,
+            },
+          }
+        : {}),
+    });
   } catch (error) {
     console.error('Contact email error:', error);
     res.status(500).json({ message: 'No pudimos enviar tu mensaje en este momento.' });

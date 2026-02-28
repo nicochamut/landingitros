@@ -37,13 +37,13 @@ const aiSolutions = [
 
 export function UseCases() {
   return (
-    <section id="soluciones-ia" className="py-20 sm:py-24 px-4 sm:px-6 bg-gradient-to-b from-black to-[#131415]">
+    <section id="soluciones-ia" className="py-16 sm:py-20 px-4 sm:px-6 bg-gradient-to-b from-black to-[#131415]">
       <div className="mx-auto max-w-7xl">
         <div className="text-center mb-16">
           <div className="inline-block px-4 py-2 bg-[#0251FF]/10 border border-[#0251FF]/30 rounded-full mb-6">
             <span className="text-sm text-[#2794F6]">Soluciones con IA</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-medium text-white mb-4">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-medium text-white mb-4">
             Inteligencia artificial integrada a procesos de negocio
           </h2>
           <p className="text-lg text-white/60 max-w-3xl mx-auto">

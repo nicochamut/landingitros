@@ -27,7 +27,7 @@ export function Footer() {
             <ul className="space-y-3">
               <li><a href="mailto:nicolas@itros.ar" className="text-white/60 hover:text-[#2794F6] transition-colors">nicolas@itros.ar</a></li>
               <li><a href="mailto:maxi@itros.ar" className="text-white/60 hover:text-[#2794F6] transition-colors">maxi@itros.ar</a></li>
-              <li><a href="tel:+543415625518" className="text-white/60 hover:text-[#2794F6] transition-colors">3415 62-5518</a></li>
+              <li><a href="tel:+5493417415834" className="text-white/60 hover:text-[#2794F6] transition-colors">+54 9 3417 41-5834</a></li>
               <li><a href="#contacto" className="text-white/60 hover:text-[#2794F6] transition-colors">Agendar reunion</a></li>
             </ul>
           </div>
@@ -46,5 +46,6 @@ export function Footer() {
     </footer>
   );
 }
+
 
 
