@@ -27,7 +27,7 @@ export function Contact() {
     if (!formData.name || !formData.email || !formData.message) {
       setStatus({
         type: 'error',
-        message: 'Completa nombre, email y mensaje para continuar.',
+        message: 'Complet\u00e1 nombre, email y mensaje para continuar.',
       });
       return;
     }
@@ -59,7 +59,7 @@ export function Contact() {
       });
     } catch (error) {
       const message =
-        error instanceof Error ? error.message : 'Ocurrio un error inesperado al enviar el formulario.';
+        error instanceof Error ? error.message : 'Ocurri\u00f3 un error inesperado al enviar el formulario.';
       setStatus({ type: 'error', message });
     } finally {
       setIsSubmitting(false);
@@ -76,12 +76,12 @@ export function Contact() {
             </div>
 
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-medium text-white mb-6">
-              Si tu operacion exige mas orden, control e inteligencia real, conversemos.
+              Si tu operaci&oacute;n exige m&aacute;s orden, control e inteligencia real, conversemos.
             </h2>
 
             <p className="text-base sm:text-lg text-white/60 mb-12 leading-relaxed">
-              Evaluamos tu contexto y disenamos una solucion tecnologica alineada a tus objetivos de negocio.
-              ITROS trabaja como socio estrategico para ejecutar, integrar y evolucionar tu ecosistema digital.
+              Evaluamos tu contexto y dise&ntilde;amos una soluci&oacute;n tecnol&oacute;gica alineada con tus objetivos de negocio.
+              ITROS trabaja como socio estrat&eacute;gico para ejecutar, integrar y evolucionar tu ecosistema digital.
             </p>
 
             <div className="space-y-6">
@@ -107,7 +107,7 @@ export function Contact() {
                   <Phone className="w-5 h-5 text-[#2794F6]" />
                 </div>
                 <div>
-                  <div className="text-white/50 text-sm mb-1">Telefono</div>
+                  <div className="text-white/50 text-sm mb-1">Tel&eacute;fono</div>
                   <a href="tel:+5493417415834" className="text-white hover:text-[#2794F6] transition-colors">
                     +54 9 3417 41-5834
                   </a>
@@ -119,7 +119,7 @@ export function Contact() {
                   <MapPin className="w-5 h-5 text-[#2794F6]" />
                 </div>
                 <div>
-                  <div className="text-white/50 text-sm mb-1">Ubicacion</div>
+                  <div className="text-white/50 text-sm mb-1">Ubicaci&oacute;n</div>
                   <div className="text-white">Rosario, Santa Fe</div>
                 </div>
               </div>
@@ -184,7 +184,7 @@ export function Contact() {
                     onChange={(event) => setFormData((prev) => ({ ...prev, message: event.target.value }))}
                     required
                     className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-white/30 focus:border-[#0251FF] focus:outline-none transition-colors resize-none"
-                    placeholder="Contanos que estas buscando resolver"
+                    placeholder="Contanos qu\u00e9 est\u00e1s buscando resolver"
                   />
                 </div>
 
@@ -199,7 +199,7 @@ export function Contact() {
                   disabled={isSubmitting}
                   className="w-full flex items-center justify-center gap-2 bg-[#0251FF] hover:bg-[#2794F6] text-white px-8 py-4 rounded-lg transition-colors"
                 >
-                  {isSubmitting ? 'Enviando...' : 'Solicitar reunion'}
+                  {isSubmitting ? 'Enviando...' : 'Solicitar reuni\u00f3n'}
                   <ArrowRight className="w-5 h-5" />
                 </button>
               </form>

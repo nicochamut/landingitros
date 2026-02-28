@@ -12,7 +12,7 @@ export function Header() {
 
           <div className="hidden md:flex items-center gap-6 lg:gap-10">
             <a href="#services" className="text-sm text-white/70 hover:text-white transition-colors">
-              Que hacemos
+              Qu&eacute; hacemos
             </a>
             <a href="#portal-inteligente" className="text-sm text-white/70 hover:text-white transition-colors">
               Portal Inteligente
@@ -21,7 +21,7 @@ export function Header() {
               Soluciones con IA
             </a>
             <a href="#why-itros" className="text-sm text-white/70 hover:text-white transition-colors">
-              Por que ITROS
+              Por qu&eacute; ITROS
             </a>
           </div>
 

@@ -4,22 +4,22 @@ const portalFeatures = [
   {
     number: '01',
     title: 'Portal modular',
-    description: 'Centraliza operaciones de gestion, auditoria y administracion en una plataforma unica, organizada por modulos escalables.'
+    description: 'Centraliza operaciones de gesti\u00f3n, auditor\u00eda y administraci\u00f3n en una plataforma \u00fanica, organizada por m\u00f3dulos escalables.'
   },
   {
     number: '02',
     title: 'Arquitectura moderna',
-    description: 'Base tecnica moderna para rendimiento estable, evolucion continua y mantenimiento predecible.'
+    description: 'Base t\u00e9cnica moderna para un rendimiento estable, evoluci\u00f3n continua y mantenimiento predecible.'
   },
   {
     number: '03',
     title: 'Control empresarial',
-    description: 'Control de acceso por perfiles y trazabilidad por usuario para operar con seguridad y evidencia en cada accion.'
+    description: 'Control de acceso por perfiles y trazabilidad por usuario para operar con seguridad y evidencia en cada acci\u00f3n.'
   },
   {
     number: '04',
     title: 'Integracion y despliegue',
-    description: 'Conecta sistemas internos y servicios externos para escalar sin frenar la operacion.'
+    description: 'Conecta sistemas internos y servicios externos para escalar sin frenar la operaci\u00f3n.'
   }
 ];
 
@@ -35,7 +35,7 @@ export function HowWeWork() {
             Una plataforma para ordenar, escalar y decidir con datos confiables
           </h2>
           <p className="text-lg text-white/60 max-w-3xl mx-auto">
-            Nuestro portal empresarial integra procesos, seguridad e infraestructura en un entorno listo para crecer con la empresa.
+            Nuestro portal empresarial integra procesos, seguridad e infraestructura en un entorno preparado para crecer con la empresa.
           </p>
         </div>
 

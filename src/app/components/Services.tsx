@@ -3,23 +3,23 @@ import { Cloud, Cog, Lock, Network, Server, Zap } from 'lucide-react';
 const services = [
   {
     icon: Cog,
-    title: 'Gestion y administracion digital',
-    description: 'Digitalizamos procesos de gestion y administracion para reducir tareas manuales, eliminar cuellos de botella y sostener operaciones consistentes.'
+    title: 'Gesti\u00f3n y administraci\u00f3n digital',
+    description: 'Digitalizamos procesos de gesti\u00f3n y administraci\u00f3n para reducir tareas manuales, eliminar cuellos de botella y sostener operaciones consistentes.'
   },
   {
     icon: Network,
-    title: 'Integracion de sistemas y datos',
-    description: 'Conectamos sistemas internos y plataformas externas para consolidar informacion y operar con una sola fuente confiable.'
+    title: 'Integraci\u00f3n de sistemas y datos',
+    description: 'Conectamos sistemas internos y plataformas externas para consolidar informaci\u00f3n y operar con una sola fuente confiable.'
   },
   {
     icon: Zap,
-    title: 'Automatizacion operativa',
-    description: 'Diseniamos flujos automaticos para validaciones, aprobaciones y ejecucion de procesos criticos con menor error humano.'
+    title: 'Automatizaci\u00f3n operativa',
+    description: 'Dise\u00f1amos flujos autom\u00e1ticos para validaciones, aprobaciones y ejecuci\u00f3n de procesos cr\u00edticos con menos error humano.'
   },
   {
     icon: Lock,
     title: 'Seguridad y control de acceso',
-    description: 'Implementamos esquemas de acceso por perfiles y permisos granulares para proteger datos y mantener trazabilidad por accion.'
+    description: 'Implementamos esquemas de acceso por perfiles y permisos granulares para proteger datos y mantener trazabilidad por acci\u00f3n.'
   },
   {
     icon: Cloud,
@@ -39,13 +39,13 @@ export function Services() {
       <div className="mx-auto max-w-7xl">
         <div className="text-center mb-16">
           <div className="inline-block px-4 py-2 bg-[#0251FF]/10 border border-[#0251FF]/30 rounded-full mb-6">
-            <span className="text-sm text-[#2794F6]">Que hacemos</span>
+            <span className="text-sm text-[#2794F6]">Qu&eacute; hacemos</span>
           </div>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-medium text-white mb-4">
-            Soluciones digitales construidas para la operacion real
+            Soluciones digitales construidas para la operaci&oacute;n real
           </h2>
           <p className="text-lg text-white/60 max-w-3xl mx-auto">
-            Desarrollamos soluciones para empresas que necesitan orden, control y trazabilidad en procesos criticos. Cada implementacion responde al contexto del negocio, no a plantillas genericas.
+            Desarrollamos soluciones para empresas que necesitan orden, control y trazabilidad en procesos cr&iacute;ticos. Cada implementaci&oacute;n responde al contexto del negocio, no a plantillas gen&eacute;ricas.
           </p>
         </div>
 

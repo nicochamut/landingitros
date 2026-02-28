@@ -12,11 +12,11 @@ export function Hero() {
             </div>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.4rem] font-medium text-white leading-tight">
-              Ingenieria digital para empresas que necesitan control, trazabilidad e inteligencia operativa.
+              Ingenier&iacute;a digital para empresas que necesitan control, trazabilidad e inteligencia operativa.
             </h1>
 
             <p className="text-[0.95rem] sm:text-base md:text-[1.05rem] text-white/90 lg:text-white/70 leading-relaxed max-w-xl mx-auto lg:mx-0 px-2 py-1 rounded-md bg-black/35 lg:bg-transparent backdrop-blur-[1px] lg:backdrop-blur-0">
-              En ITROS diseniamos y construimos ecosistemas tecnologicos a medida: software empresarial, infraestructura escalable e inteligencia artificial aplicada para automatizar procesos, mejorar decisiones y operar con mayor precision.
+              En ITROS dise&ntilde;amos y construimos ecosistemas tecnol&oacute;gicos a medida: software empresarial, infraestructura escalable e inteligencia artificial aplicada para automatizar procesos, mejorar decisiones y operar con mayor precisi&oacute;n.
             </p>
 
             <div className="hidden lg:flex flex-wrap gap-4 pt-2">

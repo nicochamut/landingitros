@@ -3,35 +3,35 @@ import { Bot, FileText, SearchCheck, Sparkles } from 'lucide-react';
 const aiSolutions = [
   {
     icon: Sparkles,
-    title: 'Analisis y prediccion operativa',
+    title: 'An\u00e1lisis y predicci\u00f3n operativa',
     scenario: 'Modelos para decisiones de negocio',
-    challenge: 'Datos dispersos y analisis manual que retrasan decisiones clave.',
-    solution: 'Automatizamos analisis de datos y aplicamos modelos predictivos para anticipar desvio de indicadores y oportunidades de optimizacion.',
-    results: ['Menos tiempo de analisis', 'Mejor precision en proyecciones', 'Decisiones basadas en evidencia']
+    challenge: 'Datos dispersos y an\u00e1lisis manual que demoran decisiones clave.',
+    solution: 'Automatizamos el an\u00e1lisis de datos y aplicamos modelos predictivos para anticipar desv\u00edos de indicadores y detectar oportunidades de optimizaci\u00f3n.',
+    results: ['Menos tiempo de an\u00e1lisis', 'M\u00e1s precisi\u00f3n en proyecciones', 'Decisiones basadas en evidencia']
   },
   {
     icon: Bot,
     title: 'Asistentes inteligentes internos',
     scenario: 'Soporte operativo con contexto empresarial',
     challenge: 'Equipos con alta carga de consultas repetitivas y poca visibilidad transversal.',
-    solution: 'Integramos asistentes conversacionales conectados a informacion interna para responder, guiar procesos y acelerar ejecucion.',
-    results: ['Atencion interna mas rapida', 'Menor carga operativa', 'Mayor autonomia por equipo']
+    solution: 'Integramos asistentes conversacionales conectados a informaci\u00f3n interna para responder, guiar procesos y acelerar la ejecuci\u00f3n.',
+    results: ['Atenci\u00f3n interna m\u00e1s r\u00e1pida', 'Menor carga operativa', 'Mayor autonom\u00eda por equipo']
   },
   {
     icon: FileText,
-    title: 'Reportes y clasificacion automatica',
-    scenario: 'Informacion lista para auditoria y gestion',
-    challenge: 'Reportes manuales lentos y documentacion sin estandarizacion.',
-    solution: 'Generamos reportes automaticos, clasificamos informacion y estructuramos salidas para seguimiento operativo y ejecutivo.',
+    title: 'Reportes y clasificaci\u00f3n autom\u00e1tica',
+    scenario: 'Informaci\u00f3n lista para auditor\u00eda y gesti\u00f3n',
+    challenge: 'Reportes manuales lentos y documentaci\u00f3n sin estandarizaci\u00f3n.',
+    solution: 'Generamos reportes autom\u00e1ticos, clasificamos informaci\u00f3n y estructuramos salidas para el seguimiento operativo y ejecutivo.',
     results: ['Reportes consistentes', 'Menos trabajo manual', 'Visibilidad continua del estado operativo']
   },
   {
     icon: SearchCheck,
-    title: 'Validacion y deteccion de inconsistencias',
-    scenario: 'Control preventivo de procesos criticos',
-    challenge: 'Errores detectados tarde en flujos con impacto economico o regulatorio.',
-    solution: 'Implementamos reglas inteligentes para validar procesos, detectar anomalias y alertar desajustes antes de que escalen.',
-    results: ['Menos errores en ejecucion', 'Mayor trazabilidad', 'Riesgo operativo reducido']
+    title: 'Validaci\u00f3n y detecci\u00f3n de inconsistencias',
+    scenario: 'Control preventivo de procesos cr\u00edticos',
+    challenge: 'Errores detectados tarde en flujos con impacto econ\u00f3mico o regulatorio.',
+    solution: 'Implementamos reglas inteligentes para validar procesos, detectar anomal\u00edas y alertar desajustes antes de que escalen.',
+    results: ['Menos errores en ejecuci\u00f3n', 'Mayor trazabilidad', 'Riesgo operativo reducido']
   }
 ];
 
@@ -47,7 +47,7 @@ export function UseCases() {
             Inteligencia artificial integrada a procesos de negocio
           </h2>
           <p className="text-lg text-white/60 max-w-3xl mx-auto">
-            Aplicamos IA donde existe impacto medible: eficiencia, calidad de datos, control operativo y mejor toma de decisiones.
+            Aplicamos IA donde hay impacto medible: eficiencia, calidad de datos, control operativo y una mejor toma de decisiones.
           </p>
         </div>
 
@@ -75,14 +75,14 @@ export function UseCases() {
 
               <div className="space-y-4 ml-0 sm:ml-16">
                 <div>
-                  <div className="text-sm text-white/50 mb-1">Desafio</div>
+                  <div className="text-sm text-white/50 mb-1">Desaf&iacute;o</div>
                   <p className="text-white/70">
                     {solution.challenge}
                   </p>
                 </div>
 
                 <div>
-                  <div className="text-sm text-white/50 mb-1">Aplicacion</div>
+                  <div className="text-sm text-white/50 mb-1">Aplicaci&oacute;n</div>
                   <p className="text-white/70">
                     {solution.solution}
                   </p>

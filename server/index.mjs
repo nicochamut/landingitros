@@ -58,14 +58,14 @@ app.post('/api/contact', async (req, res) => {
 
   if (String(name).trim().length < 2 || String(message).trim().length < 10) {
     res.status(400).json({
-      message: 'Completa un nombre valido y un mensaje de al menos 10 caracteres.',
+      message: 'Complet\u00e1 un nombre v\u00e1lido y un mensaje de al menos 10 caracteres.',
     });
     return;
   }
 
   if (!isValidEmail(email)) {
     res.status(400).json({
-      message: 'El email ingresado no es valido.',
+      message: 'El email ingresado no es v\u00e1lido.',
     });
     return;
   }
@@ -74,7 +74,7 @@ app.post('/api/contact', async (req, res) => {
   if (runtimeMissingEnvVars.length > 0) {
     console.error(`Missing required env vars at request time: ${runtimeMissingEnvVars.join(', ')}`);
     res.status(500).json({
-      message: 'El servidor no esta configurado para enviar emails.',
+      message: 'El servidor no est\u00e1 configurado para enviar emails.',
     });
     return;
   }
@@ -83,7 +83,7 @@ app.post('/api/contact', async (req, res) => {
   if (recipients.length === 0 || recipients.some((recipient) => !isValidEmail(recipient))) {
     console.error('Invalid CONTACT_TO_EMAIL value:', process.env.CONTACT_TO_EMAIL);
     res.status(500).json({
-      message: 'La lista de destinatarios del servidor no es valida.',
+      message: 'La lista de destinatarios del servidor no es v\u00e1lida.',
     });
     return;
   }
@@ -119,7 +119,7 @@ app.post('/api/contact', async (req, res) => {
 
     if (!Array.isArray(info.accepted) || info.accepted.length === 0) {
       res.status(502).json({
-        message: 'El proveedor SMTP rechazo todos los destinatarios.',
+        message: 'El proveedor SMTP rechaz\u00f3 todos los destinatarios.',
         ...(contactDebug
           ? {
               debug: {
