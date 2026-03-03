@@ -34,7 +34,7 @@ export function WhyITRos() {
         <div className="grid lg:grid-cols-[0.9fr_1fr] gap-8 lg:gap-12 items-end mb-16 text-center lg:text-left">
           <div className="flex flex-col items-center lg:items-start">
             <div className="inline-block px-4 py-2 bg-[#0251FF]/10 border border-[#0251FF]/30 rounded-full mb-6">
-              <span className="text-sm text-[#2794F6]">Por qu&eacute; ITROS</span>
+              <span className="text-sm text-[#2794F6]">Por qu&eacute; ITRos</span>
             </div>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-white mb-4 max-w-3xl">
               Un socio tecnol&oacute;gico pensado para operaciones complejas

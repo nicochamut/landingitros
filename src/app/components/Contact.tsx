@@ -1,5 +1,5 @@
 import { FormEvent, useState } from 'react';
-import { ArrowRight, Mail, MapPin, Phone } from 'lucide-react';
+import { ArrowRight, Mail, MapPin, MessageCircle, Phone } from 'lucide-react';
 
 type ContactFormData = {
   name: string;
@@ -7,6 +7,29 @@ type ContactFormData = {
   company: string;
   message: string;
 };
+
+async function getErrorMessage(response: Response) {
+  const fallbackMessage = 'No se pudo enviar el mensaje.';
+  const contentType = response.headers.get('content-type') ?? '';
+
+  if (contentType.includes('application/json')) {
+    try {
+      const data = (await response.json()) as { message?: string };
+      if (data.message) {
+        return data.message;
+      }
+    } catch {
+      // Fall back to text parsing below.
+    }
+  }
+
+  try {
+    const text = (await response.text()).trim();
+    return text || fallbackMessage;
+  } catch {
+    return fallbackMessage;
+  }
+}
 
 export function Contact() {
   const [formData, setFormData] = useState<ContactFormData>({
@@ -43,8 +66,7 @@ export function Contact() {
       });
 
       if (!response.ok) {
-        const data = (await response.json()) as { message?: string };
-        throw new Error(data.message ?? 'No se pudo enviar el mensaje.');
+        throw new Error(await getErrorMessage(response));
       }
 
       setStatus({
@@ -86,6 +108,16 @@ export function Contact() {
             <p className="text-sm sm:text-base text-white/60 mb-12 leading-relaxed">
               La primera conversacion es de diagnostico, sin costo, y nos permite entender prioridades, restricciones y alcance estimado.
             </p>
+
+            <a
+              href="https://wa.me/5493417415834"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-3 rounded-lg border border-[#25D366]/30 bg-[#25D366]/10 px-5 py-3 text-white transition-colors hover:bg-[#25D366]/20 mb-12"
+            >
+              <MessageCircle className="w-5 h-5 text-[#25D366]" />
+              <span>Escribir por WhatsApp</span>
+            </a>
 
             <div className="space-y-6 max-w-xl mx-auto lg:mx-0">
               <div className="flex items-start gap-4">

@@ -6,7 +6,7 @@ export function Footer() {
       <div className="mx-auto max-w-7xl">
         <div className="grid md:grid-cols-4 gap-10 md:gap-12 mb-12">
           <div className="md:col-span-2">
-            <img src={logoImage} alt="ITROS" className="h-10 mb-4" />
+            <img src={logoImage} alt="ITRos" className="h-10 mb-4" />
             <p className="text-white/72 max-w-md leading-relaxed">
               Ecosistemas digitales para empresas que necesitan eficiencia operativa, control y escalabilidad con una base tecnol&oacute;gica s&oacute;lida.
             </p>
@@ -18,7 +18,7 @@ export function Footer() {
               <li><a href="#services" className="text-white/72 hover:text-[#2794F6] transition-colors">Qu&eacute; hacemos</a></li>
               <li><a href="#portal-inteligente" className="text-white/72 hover:text-[#2794F6] transition-colors">Portal Inteligente</a></li>
               <li><a href="#soluciones-ia" className="text-white/72 hover:text-[#2794F6] transition-colors">Soluciones con IA</a></li>
-              <li><a href="#why-itros" className="text-white/72 hover:text-[#2794F6] transition-colors">Por qu&eacute; ITROS</a></li>
+              <li><a href="#why-itros" className="text-white/72 hover:text-[#2794F6] transition-colors">Por qu&eacute; ITRos</a></li>
             </ul>
           </div>
 
@@ -35,7 +35,7 @@ export function Footer() {
 
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-white/40 text-sm">
-            © 2026 ITROS. Todos los derechos reservados.
+            © 2026 ITRos. Todos los derechos reservados.
           </p>
           <p className="text-white/40 text-sm text-center">
             La documentaci&oacute;n legal y de privacidad se comparte en instancias comerciales seg&uacute;n el alcance del proyecto.

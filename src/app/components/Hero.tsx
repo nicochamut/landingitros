@@ -39,7 +39,7 @@ export function Hero() {
           <div className="order-2 mt-2 sm:mt-4 lg:mt-0 relative z-0 flex items-center justify-center lg:justify-end lg:-mr-6 xl:-mr-10 pointer-events-none">
             <img
               src={heroImage}
-              alt="ITROS intelligent digital ecosystem"
+              alt="ITRos intelligent digital ecosystem"
               className="w-full max-w-[780px] sm:max-w-[860px] lg:max-w-[1180px] xl:max-w-[1320px] h-auto opacity-45 sm:opacity-60 lg:opacity-92 scale-100 lg:scale-105 xl:scale-110 origin-center mx-auto lg:translate-x-2 xl:translate-x-6"
             />
           </div>

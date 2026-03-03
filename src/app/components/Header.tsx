@@ -7,9 +7,9 @@ export function Header() {
       <nav className="mx-auto max-w-[1320px] px-4 sm:px-6 py-3">
         <div className="flex items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            <img src={logoImage} alt="ITROS" className="h-9 sm:h-10 md:h-12 w-auto" />
+            <img src={logoImage} alt="ITRos" className="h-9 sm:h-10 md:h-12 w-auto" />
             <span className="text-sm sm:text-lg md:text-xl font-semibold tracking-[0.1em] sm:tracking-[0.12em] text-white">
-              ITROS
+              ITRos
             </span>
           </div>
 
@@ -24,7 +24,7 @@ export function Header() {
               Soluciones con IA
             </a>
             <a href="#why-itros" className="text-sm text-white/75 hover:text-white transition-colors">
-              Por qu&eacute; ITROS
+              Por qu&eacute; ITRos
             </a>
           </div>
 
@@ -49,7 +49,7 @@ export function Header() {
             IA
           </a>
           <a href="#why-itros" className="text-xs text-white/75 hover:text-white transition-colors">
-            Por qu&eacute; ITROS
+            Por qu&eacute; ITRos
           </a>
         </div>
       </nav>
