@@ -3,48 +3,54 @@ import heroImage from '../../assets/7c856a28c1ca2105ace97221d7f416a084ad4ee3.png
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center px-4 sm:px-6 py-16 sm:py-20 lg:py-24 bg-black overflow-hidden">
+    <section className="relative min-h-screen flex items-center px-4 sm:px-6 pt-32 pb-16 sm:pt-40 sm:pb-20 lg:pt-36 lg:pb-24 bg-black overflow-hidden">
       <div className="mx-auto max-w-7xl w-full">
-        <div className="grid lg:grid-cols-[1.2fr_1.6fr] gap-8 lg:gap-6 items-center">
-          <div className="order-1 space-y-7 max-w-[46rem] relative z-20 pb-0 mx-auto lg:mx-0 text-center lg:text-left flex flex-col items-center lg:items-start">
+        <div className="grid lg:grid-cols-[1.05fr_1.25fr] gap-10 lg:gap-8 items-center">
+          <div className="order-1 space-y-7 max-w-[42rem] relative z-20 mx-auto lg:mx-0 text-center lg:text-left flex flex-col items-center lg:items-start">
             <div className="inline-block px-4 py-2 bg-white/5 border border-[#0251FF]/30 rounded-full">
-              <span className="text-sm text-white/80">Software empresarial, infraestructura e IA aplicada</span>
+              <span className="text-sm text-white/85">Software empresarial, infraestructura e IA aplicada</span>
             </div>
 
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.4rem] font-medium text-white leading-tight">
-              Ingenier&iacute;a digital para empresas que necesitan control, trazabilidad e inteligencia operativa.
+            <h1 className="max-w-4xl text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-semibold text-white leading-[1.05]">
+              Sistemas, infraestructura e inteligencia aplicada para operar con m&aacute;s control.
             </h1>
 
-            <p className="text-[0.95rem] sm:text-base md:text-[1.05rem] text-white/90 lg:text-white/70 leading-relaxed max-w-xl mx-auto lg:mx-0 px-2 py-1 rounded-md bg-black/35 lg:bg-transparent backdrop-blur-[1px] lg:backdrop-blur-0">
-              En ITROS dise&ntilde;amos y construimos ecosistemas tecnol&oacute;gicos a medida: software empresarial, infraestructura escalable e inteligencia artificial aplicada para automatizar procesos, mejorar decisiones y operar con mayor precisi&oacute;n.
+            <p className="text-base sm:text-lg text-white/78 leading-relaxed max-w-2xl">
+              Dise&ntilde;amos soluciones a medida para empresas que necesitan ordenar procesos cr&iacute;ticos, reducir trabajo manual y tomar decisiones con informaci&oacute;n confiable.
             </p>
 
+            <div className="flex flex-wrap justify-center lg:justify-start gap-3 text-sm text-white/75">
+              <span className="px-3 py-2 rounded-full bg-white/5 border border-white/10">Menos fricci&oacute;n operativa</span>
+              <span className="px-3 py-2 rounded-full bg-white/5 border border-white/10">M&aacute;s trazabilidad</span>
+              <span className="px-3 py-2 rounded-full bg-white/5 border border-white/10">Escalabilidad sin improvisaci&oacute;n</span>
+            </div>
+
             <div className="hidden lg:flex flex-wrap gap-4 pt-2">
-              <button className="w-full sm:w-auto flex items-center justify-center gap-2 bg-white text-[#131415] px-8 py-4 rounded-lg hover:bg-white/90 transition-colors">
-                Explorar capacidades
+              <a href="#services" className="w-full sm:w-auto flex items-center justify-center gap-2 bg-white text-[#131415] px-8 py-4 rounded-lg hover:bg-white/90 transition-colors">
+                Ver soluciones
                 <ArrowRight className="w-5 h-5" />
-              </button>
-              <a href="#contacto" className="w-full sm:w-auto flex items-center justify-center px-8 py-4 bg-transparent border border-white/20 text-white rounded-lg hover:bg-white/5 transition-colors">
-                Hablar con ITROS
+              </a>
+              <a href="#portal-inteligente" className="w-full sm:w-auto flex items-center justify-center px-8 py-4 bg-transparent border border-white/20 text-white rounded-lg hover:bg-white/5 transition-colors">
+                C&oacute;mo trabajamos
               </a>
             </div>
           </div>
 
-          <div className="order-2 -mt-48 sm:-mt-56 lg:mt-0 relative z-0 flex items-center justify-center lg:justify-end lg:-mr-8 xl:-mr-14 pointer-events-none">
+          <div className="order-2 mt-2 sm:mt-4 lg:mt-0 relative z-0 flex items-center justify-center lg:justify-end lg:-mr-6 xl:-mr-10 pointer-events-none">
             <img
               src={heroImage}
               alt="ITROS intelligent digital ecosystem"
-              className="w-full max-w-[920px] lg:max-w-[1280px] xl:max-w-[1450px] h-auto opacity-55 sm:opacity-72 lg:opacity-95 lg:scale-112 xl:scale-118 origin-center mx-auto lg:translate-x-4 xl:translate-x-8"
+              className="w-full max-w-[780px] sm:max-w-[860px] lg:max-w-[1180px] xl:max-w-[1320px] h-auto opacity-45 sm:opacity-60 lg:opacity-92 scale-100 lg:scale-105 xl:scale-110 origin-center mx-auto lg:translate-x-2 xl:translate-x-6"
             />
           </div>
 
-          <div className="order-3 lg:hidden flex flex-wrap gap-4 relative z-20 w-full max-w-md mx-auto">
-            <button className="w-full sm:w-auto flex items-center justify-center gap-2 bg-white text-[#131415] px-8 py-4 rounded-lg hover:bg-white/90 transition-colors">
-              Explorar capacidades
+          <div className="order-3 lg:hidden flex flex-col sm:flex-row gap-4 relative z-20 w-full max-w-xl mx-auto">
+            <a href="#services" className="w-full sm:flex-1 flex items-center justify-center gap-2 bg-white text-[#131415] px-8 py-4 rounded-lg hover:bg-white/90 transition-colors">
+              Ver soluciones
               <ArrowRight className="w-5 h-5" />
-            </button>
-            <a href="#contacto" className="w-full sm:w-auto flex items-center justify-center px-8 py-4 bg-transparent border border-white/20 text-white rounded-lg hover:bg-white/5 transition-colors">
-              Hablar con ITROS
+            </a>
+            <a href="#contacto" className="w-full sm:flex-1 flex items-center justify-center px-8 py-4 bg-transparent border border-white/20 text-white rounded-lg hover:bg-white/5 transition-colors">
+              Agendar reuni&oacute;n
             </a>
           </div>
         </div>

@@ -39,15 +39,17 @@ export function UseCases() {
   return (
     <section id="soluciones-ia" className="py-16 sm:py-20 px-4 sm:px-6 bg-gradient-to-b from-black to-[#131415]">
       <div className="mx-auto max-w-7xl">
-        <div className="text-center mb-16">
-          <div className="inline-block px-4 py-2 bg-[#0251FF]/10 border border-[#0251FF]/30 rounded-full mb-6">
-            <span className="text-sm text-[#2794F6]">Soluciones con IA</span>
+        <div className="grid lg:grid-cols-[1fr_0.95fr] gap-8 lg:gap-12 items-end mb-16 text-center lg:text-left">
+          <div className="flex flex-col items-center lg:items-start">
+            <div className="inline-block px-4 py-2 bg-[#0251FF]/10 border border-[#0251FF]/30 rounded-full mb-6">
+              <span className="text-sm text-[#2794F6]">Soluciones con IA</span>
+            </div>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-white mb-4 max-w-3xl">
+              IA integrada donde hay impacto operativo y decisiones que acelerar
+            </h2>
           </div>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-medium text-white mb-4">
-            Inteligencia artificial integrada a procesos de negocio
-          </h2>
-          <p className="text-lg text-white/60 max-w-3xl mx-auto">
-            Aplicamos IA donde hay impacto medible: eficiencia, calidad de datos, control operativo y una mejor toma de decisiones.
+          <p className="text-base sm:text-lg text-white/72 max-w-2xl mx-auto lg:mx-0 lg:ml-auto">
+            Aplicamos inteligencia artificial en flujos concretos, con foco en eficiencia, calidad de datos, prevenci&oacute;n de errores y mejor capacidad de respuesta.
           </p>
         </div>
 
@@ -55,7 +57,7 @@ export function UseCases() {
           {aiSolutions.map((solution, index) => (
             <div
               key={index}
-              className="relative bg-white/[0.02] border border-white/10 rounded-lg p-6 sm:p-8 hover:border-[#0251FF]/50 transition-all duration-300"
+              className="relative bg-white/[0.025] border border-white/10 rounded-xl p-6 sm:p-8 hover:border-[#0251FF]/50 transition-all duration-300"
             >
               <div className="hidden sm:block absolute left-0 top-8 bottom-8 w-[2px] bg-gradient-to-b from-transparent via-[#0251FF] to-transparent" />
 
@@ -64,10 +66,10 @@ export function UseCases() {
                   <solution.icon className="w-6 h-6 text-[#2794F6]" />
                 </div>
                 <div>
-                  <h3 className="text-xl text-white mb-1">
+                  <h3 className="text-xl font-medium text-white mb-1">
                     {solution.title}
                   </h3>
-                  <div className="text-sm text-[#2794F6]">
+                  <div className="text-sm text-[#5caeff]">
                     {solution.scenario}
                   </div>
                 </div>
@@ -75,26 +77,26 @@ export function UseCases() {
 
               <div className="space-y-4 ml-0 sm:ml-16">
                 <div>
-                  <div className="text-sm text-white/50 mb-1">Desaf&iacute;o</div>
-                  <p className="text-white/70">
+                  <div className="text-sm text-white/60 mb-1">Desaf&iacute;o</div>
+                  <p className="text-white/78">
                     {solution.challenge}
                   </p>
                 </div>
 
                 <div>
-                  <div className="text-sm text-white/50 mb-1">Aplicaci&oacute;n</div>
-                  <p className="text-white/70">
+                  <div className="text-sm text-white/60 mb-1">Aplicaci&oacute;n</div>
+                  <p className="text-white/78">
                     {solution.solution}
                   </p>
                 </div>
 
                 <div>
-                  <div className="text-sm text-white/50 mb-2">Impacto</div>
+                  <div className="text-sm text-white/60 mb-2">Impacto</div>
                   <div className="flex flex-wrap gap-2">
                     {solution.results.map((result, i) => (
                       <span
                         key={i}
-                        className="px-3 py-1 bg-[#0251FF]/10 border border-[#0251FF]/30 rounded-full text-sm text-[#2794F6]"
+                        className="px-3 py-1 bg-[#0251FF]/10 border border-[#0251FF]/30 rounded-full text-sm text-[#5caeff]"
                       >
                         {result}
                       </span>

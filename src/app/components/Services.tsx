@@ -37,15 +37,17 @@ export function Services() {
   return (
     <section id="services" className="py-16 sm:py-20 px-4 sm:px-6 bg-[#131415]">
       <div className="mx-auto max-w-7xl">
-        <div className="text-center mb-16">
-          <div className="inline-block px-4 py-2 bg-[#0251FF]/10 border border-[#0251FF]/30 rounded-full mb-6">
-            <span className="text-sm text-[#2794F6]">Qu&eacute; hacemos</span>
+        <div className="grid lg:grid-cols-[1fr_0.95fr] gap-8 lg:gap-12 items-end mb-16 text-center lg:text-left">
+          <div className="flex flex-col items-center lg:items-start">
+            <div className="inline-block px-4 py-2 bg-[#0251FF]/10 border border-[#0251FF]/30 rounded-full mb-6">
+              <span className="text-sm text-[#2794F6]">Qu&eacute; hacemos</span>
+            </div>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-white mb-4 max-w-3xl">
+              Soluciones dise&ntilde;adas para que la operaci&oacute;n gane orden y continuidad
+            </h2>
           </div>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-medium text-white mb-4">
-            Soluciones digitales construidas para la operaci&oacute;n real
-          </h2>
-          <p className="text-lg text-white/60 max-w-3xl mx-auto">
-            Desarrollamos soluciones para empresas que necesitan orden, control y trazabilidad en procesos cr&iacute;ticos. Cada implementaci&oacute;n responde al contexto del negocio, no a plantillas gen&eacute;ricas.
+          <p className="text-base sm:text-lg text-white/72 max-w-2xl mx-auto lg:mx-0 lg:ml-auto">
+            Dise&ntilde;amos implementaciones enfocadas en problemas concretos: m&aacute;s control, menos tareas manuales, mejor visibilidad y una base tecnol&oacute;gica preparada para crecer.
           </p>
         </div>
 
@@ -53,7 +55,7 @@ export function Services() {
           {services.map((service, index) => (
             <div
               key={index}
-              className="group relative bg-white/[0.02] border border-white/10 rounded-lg p-6 sm:p-8 hover:border-[#0251FF]/50 transition-all duration-300"
+              className="group relative bg-white/[0.025] border border-white/10 rounded-xl p-6 sm:p-8 hover:border-[#0251FF]/50 transition-all duration-300"
             >
               <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#0251FF] to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
 
@@ -61,11 +63,11 @@ export function Services() {
                 <service.icon className="w-6 h-6 text-[#2794F6]" />
               </div>
 
-              <h3 className="text-xl text-white mb-3">
+              <h3 className="text-xl font-medium text-white mb-3">
                 {service.title}
               </h3>
 
-              <p className="text-white/60 leading-relaxed">
+              <p className="text-white/72 leading-relaxed">
                 {service.description}
               </p>
             </div>

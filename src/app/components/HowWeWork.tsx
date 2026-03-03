@@ -18,7 +18,7 @@ const portalFeatures = [
   },
   {
     number: '04',
-    title: 'Integracion y despliegue',
+    title: 'Integraci\u00f3n y despliegue',
     description: 'Conecta sistemas internos y servicios externos para escalar sin frenar la operaci\u00f3n.'
   }
 ];
@@ -27,15 +27,17 @@ export function HowWeWork() {
   return (
     <section id="portal-inteligente" className="py-16 sm:py-20 px-4 sm:px-6 bg-gradient-to-b from-[#131415] to-black">
       <div className="mx-auto max-w-7xl">
-        <div className="text-center mb-16">
-          <div className="inline-block px-4 py-2 bg-[#0251FF]/10 border border-[#0251FF]/30 rounded-full mb-6">
-            <span className="text-sm text-[#2794F6]">Portal Inteligente</span>
+        <div className="grid lg:grid-cols-[0.9fr_1fr] gap-8 lg:gap-12 items-end mb-16 text-center lg:text-left">
+          <div className="flex flex-col items-center lg:items-start">
+            <div className="inline-block px-4 py-2 bg-[#0251FF]/10 border border-[#0251FF]/30 rounded-full mb-6">
+              <span className="text-sm text-[#2794F6]">Portal Inteligente</span>
+            </div>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-white mb-4 max-w-3xl">
+              Una plataforma para ordenar procesos y sostener decisiones con datos confiables
+            </h2>
           </div>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-medium text-white mb-4">
-            Una plataforma para ordenar, escalar y decidir con datos confiables
-          </h2>
-          <p className="text-lg text-white/60 max-w-3xl mx-auto">
-            Nuestro portal empresarial integra procesos, seguridad e infraestructura en un entorno preparado para crecer con la empresa.
+          <p className="text-base sm:text-lg text-white/72 max-w-2xl mx-auto lg:mx-0 lg:ml-auto">
+            Unificamos operaciones, seguridad y escalabilidad en una base preparada para crecer sin volver a improvisar cada cambio.
           </p>
         </div>
 
@@ -64,10 +66,10 @@ export function HowWeWork() {
                   <div className="text-4xl sm:text-5xl font-light text-[#0251FF]/30 mb-4">
                     {feature.number}
                   </div>
-                  <h3 className="text-xl text-white mb-3">
+                  <h3 className="text-xl font-medium text-white mb-3">
                     {feature.title}
                   </h3>
-                  <p className="text-white/60 leading-relaxed">
+                  <p className="text-white/72 leading-relaxed">
                     {feature.description}
                   </p>
                 </div>

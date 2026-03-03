@@ -31,15 +31,17 @@ export function WhyITRos() {
   return (
     <section id="why-itros" className="py-16 sm:py-20 px-4 sm:px-6 bg-black">
       <div className="mx-auto max-w-7xl">
-        <div className="text-center mb-16">
-          <div className="inline-block px-4 py-2 bg-[#0251FF]/10 border border-[#0251FF]/30 rounded-full mb-6">
-            <span className="text-sm text-[#2794F6]">Por qu&eacute; ITROS</span>
+        <div className="grid lg:grid-cols-[0.9fr_1fr] gap-8 lg:gap-12 items-end mb-16 text-center lg:text-left">
+          <div className="flex flex-col items-center lg:items-start">
+            <div className="inline-block px-4 py-2 bg-[#0251FF]/10 border border-[#0251FF]/30 rounded-full mb-6">
+              <span className="text-sm text-[#2794F6]">Por qu&eacute; ITROS</span>
+            </div>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-white mb-4 max-w-3xl">
+              Un socio tecnol&oacute;gico pensado para operaciones complejas
+            </h2>
           </div>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-medium text-white mb-4">
-            Socio tecnol&oacute;gico para operaciones complejas
-          </h2>
-          <p className="text-lg text-white/60 max-w-3xl mx-auto">
-            Unificamos desarrollo, infraestructura e inteligencia aplicada para que tu operaci&oacute;n gane control, continuidad y capacidad de evoluci&oacute;n.
+          <p className="text-base sm:text-lg text-white/72 max-w-2xl mx-auto lg:mx-0 lg:ml-auto">
+            Combinamos desarrollo, infraestructura e inteligencia aplicada para que el crecimiento no venga acompa&ntilde;ado de m&aacute;s fricci&oacute;n.
           </p>
         </div>
 
@@ -49,7 +51,7 @@ export function WhyITRos() {
               key={index}
               className="relative group"
             >
-              <div className="relative bg-gradient-to-b from-white/[0.03] to-white/[0.01] border border-white/10 rounded-lg p-8 hover:border-[#0251FF]/50 transition-all duration-300 h-full">
+              <div className="relative bg-gradient-to-b from-white/[0.04] to-white/[0.015] border border-white/10 rounded-xl p-8 hover:border-[#0251FF]/50 transition-all duration-300 h-full">
                 <div className="absolute top-0 right-0 w-20 h-20 overflow-hidden rounded-tr-lg">
                   <div className="absolute top-0 right-0 w-full h-[2px] bg-gradient-to-l from-[#0251FF] to-transparent" />
                   <div className="absolute top-0 right-0 h-full w-[2px] bg-gradient-to-b from-[#0251FF] to-transparent" />
@@ -59,15 +61,15 @@ export function WhyITRos() {
                   <benefit.icon className="w-6 h-6 text-[#2794F6]" />
                 </div>
 
-                <div className="text-3xl sm:text-4xl font-light text-white mb-2">
+                <div className="text-3xl sm:text-4xl font-light text-[#5caeff] mb-2">
                   {benefit.metric}
                 </div>
 
-                <h3 className="text-xl text-white mb-3">
+                <h3 className="text-xl font-medium text-white mb-3">
                   {benefit.title}
                 </h3>
 
-                <p className="text-white/60 leading-relaxed">
+                <p className="text-white/72 leading-relaxed">
                   {benefit.description}
                 </p>
               </div>
