@@ -11,7 +11,9 @@ const requiredEnvVars = [
 
 const contactDebug = process.env.CONTACT_DEBUG === 'true';
 
-export const getMissingEnvVars = () => requiredEnvVars.filter((key) => !process.env[key]);
+const getEnvValue = (key) => String(process.env[key] ?? '').trim();
+
+export const getMissingEnvVars = () => requiredEnvVars.filter((key) => !getEnvValue(key));
 
 const isValidEmail = (value) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(value).trim());
 
@@ -23,12 +25,12 @@ const parseRecipientList = (rawValue) =>
 
 const createTransporter = () =>
   nodemailer.createTransport({
-    host: process.env.SMTP_HOST,
-    port: Number(process.env.SMTP_PORT ?? 587),
-    secure: process.env.SMTP_SECURE === 'true',
+    host: getEnvValue('SMTP_HOST'),
+    port: Number(getEnvValue('SMTP_PORT') || 587),
+    secure: getEnvValue('SMTP_SECURE') === 'true',
     auth: {
-      user: process.env.SMTP_USER,
-      pass: process.env.SMTP_PASS,
+      user: getEnvValue('SMTP_USER'),
+      pass: getEnvValue('SMTP_PASS'),
     },
   });
 
@@ -68,14 +70,23 @@ export async function handleContactRequest(body) {
     return {
       status: 500,
       payload: {
-        message: 'El servidor no est\u00e1 configurado para enviar emails.',
+        message: contactDebug
+          ? `Faltan variables de entorno: ${runtimeMissingEnvVars.join(', ')}.`
+          : 'El servidor no est\u00e1 configurado para enviar emails.',
+        ...(contactDebug
+          ? {
+              debug: {
+                missingEnvVars: runtimeMissingEnvVars,
+              },
+            }
+          : {}),
       },
     };
   }
 
-  const recipients = parseRecipientList(process.env.CONTACT_TO_EMAIL);
+  const recipients = parseRecipientList(getEnvValue('CONTACT_TO_EMAIL'));
   if (recipients.length === 0 || recipients.some((recipient) => !isValidEmail(recipient))) {
-    console.error('Invalid CONTACT_TO_EMAIL value:', process.env.CONTACT_TO_EMAIL);
+    console.error('Invalid CONTACT_TO_EMAIL value:', getEnvValue('CONTACT_TO_EMAIL'));
     return {
       status: 500,
       payload: {
@@ -86,7 +97,7 @@ export async function handleContactRequest(body) {
 
   try {
     const info = await createTransporter().sendMail({
-      from: process.env.CONTACT_FROM_EMAIL,
+      from: getEnvValue('CONTACT_FROM_EMAIL'),
       to: recipients,
       replyTo: String(email).trim(),
       subject: `Nuevo contacto desde landing - ${String(name).trim()}`,
